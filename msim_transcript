@@ -1,0 +1,50 @@
+# Reading pref.tcl
+# do 2BitComparator_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/HDL/MyProjects/2BitComparator/2BitComparator.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:32:18 on Nov 23,2022
+# vcom -reportprogress 300 -93 -work work D:/HDL/MyProjects/2BitComparator/2BitComparator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TwoBitComparator
+# -- Compiling architecture equals of TwoBitComparator
+# End time: 14:32:18 on Nov 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work D:/HDL/MyProjects/2BitComparator/2BitComparator_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:32:23 on Nov 23,2022
+# vcom -reportprogress 300 -work work D:/HDL/MyProjects/2BitComparator/2BitComparator_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TwoBitComparator_tb
+# -- Compiling architecture tb of TwoBitComparator_tb
+# -- Loading entity TwoBitComparator
+# End time: 14:32:23 on Nov 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.twobitcomparator_tb
+# vsim work.twobitcomparator_tb 
+# Start time: 14:32:27 on Nov 23,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.twobitcomparator_tb(tb)
+# Loading work.twobitcomparator(equals)
+add wave -position end  sim:/twobitcomparator_tb/a
+add wave -position end  sim:/twobitcomparator_tb/b
+add wave -position end  sim:/twobitcomparator_tb/c
+run -all
+# End time: 14:33:36 on Nov 23,2022, Elapsed time: 0:01:09
+# Errors: 0, Warnings: 0

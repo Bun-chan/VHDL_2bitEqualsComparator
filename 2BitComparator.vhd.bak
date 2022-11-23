@@ -1,0 +1,7 @@
+--2022-11-23
+--2 bit comparator testing for equals
+library ieee;                 	
+use ieee.std_logic_1164.all;
+
+entity
+end;
